@@ -1,0 +1,23 @@
+{
+  "name": "captcha",
+  "version": "1.3.5",
+  "description": "captcha bot for discord",
+  "main": "captcha.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "captcha",
+    "bot",
+    "discord"
+  ],
+  "author": "Timotej Valentin Rojko",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "better-sqlite3": "^7.1.2",
+    "bufferutil": "^4.0.2",
+    "canvas": "^2.6.1",
+    "discord.js-light": "^3.5.0",
+    "zlib-sync": "^0.1.7"
+  }
+}
