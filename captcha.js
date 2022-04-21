@@ -21,10 +21,6 @@ client.on("ready", () => {
 	client.logger({ message: "Logged in" });
 });
 
-setInterval(() => {
-	dbl(client.guilds.cache.size);
-}, 86400000);
-
 const autokicks = {};
 
 client.on("message", async m => {
@@ -241,28 +237,6 @@ client.logger = (e, type) => {
 	}
 };
 
-function dbl(n) {
-	const https = require("https");
-	const req = https.request({
-		hostname: "top.gg",
-		port: 443,
-		path: "/api/bots/580578395411185664/stats",
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-			"Authorization": process.env.TOPGG_TOKEN
-		}
-	}, res => client.logger({ message: `DBL status: ${res.statusCode}` }));
-	req.on("error", e => console.error(e));
-	req.write(`{"server_count":${n}}`);
-	req.end();
-}
-
 client.on("error", e => client.logger(e, "error"));
-
-process.on("exit", () => db.close());
-process.on("SIGHUP", () => process.exit(128 + 1));
-process.on("SIGINT", () => process.exit(128 + 2));
-process.on("SIGTERM", () => process.exit(128 + 15));
 
 client.login(process.env.DISCORD_TOKEN).catch(console.error);

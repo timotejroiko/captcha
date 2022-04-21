@@ -12,7 +12,7 @@
     "discord"
   ],
   "author": "Timotej Valentin Rojko",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "better-sqlite3": "^7.1.2",
     "bufferutil": "^4.0.2",

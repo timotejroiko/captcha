@@ -1,7 +1,7 @@
 "use strict";
 
 const Database = require("better-sqlite3");
-const db = new Database("./db/captcha.db");
+const db = new Database("./captcha.db");
 
 // db.prepare("CREATE TABLE IF NOT EXISTS guilds (id TEXT PRIMARY KEY,channel TEXT,role TEXT,message TEXT,strength INT,sensitive INT);").run();
 // db.prepare("CREATE TABLE IF NOT EXISTS pending (id TEXT PRIMARY KEY,guild TEXT,code TEXT,timestamp INT);").run();
